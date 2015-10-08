@@ -1,0 +1,23 @@
+<xml>
+
+    <files id='linc_clipboard'>
+        <compilerflag value='-I${LINC_CLIPBOARD_PATH}/linc/'/>
+
+		<section if="windows">
+			<file name="${LINC_CLIPBOARD_PATH}/linc/linc_clipboard_windows.cpp" />
+		</section>
+    </files>
+
+    <files id='haxe'>
+
+        <compilerflag value='-I${LINC_CLIPBOARD_PATH}/linc/'/>
+
+    </files>
+
+   <target id="haxe">
+
+      <files id="linc_clipboard" />
+
+   </target>
+
+</xml>
