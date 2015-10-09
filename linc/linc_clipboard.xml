@@ -3,9 +3,14 @@
     <files id='linc_clipboard'>
         <compilerflag value='-I${LINC_CLIPBOARD_PATH}/linc/'/>
 
-		<section if="windows">
-			<file name="${LINC_CLIPBOARD_PATH}/linc/linc_clipboard_windows.cpp" />
-		</section>
+        <section if="mac">
+          <file name="${LINC_CLIPBOARD_PATH}/linc/linc_clipboard_mac.mm" />
+        </section>
+
+    		<section if="windows">
+    			<file name="${LINC_CLIPBOARD_PATH}/linc/linc_clipboard_windows.cpp" />
+    		</section>
+
     </files>
 
     <files id='haxe'>
