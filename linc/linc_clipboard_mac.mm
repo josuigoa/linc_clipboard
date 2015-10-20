@@ -15,7 +15,7 @@ namespace linc {
 			NSPasteboard *pasteBoard = [NSPasteboard generalPasteboard];
 		    [pasteBoard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
 
-		    [pasteBoard setString:[NSString stringWithUTF8String:(std::string(s.c_str()))] forType:NSStringPboardType];
+		    [pasteBoard setString:[NSString stringWithUTF8String:s.c_str()] forType:NSStringPboardType];
 
     	} //copy
 
@@ -24,7 +24,7 @@ namespace linc {
     		NSPasteboard *pasteBoard = [NSPasteboard generalPasteboard];
 			NSString *text = [pasteBoard stringForType:NSStringPboardType];
 				
-			return ::String(std::string( [text UTF8String] ));
+			return ::String([text UTF8String]);
 
     	} //paste
 
