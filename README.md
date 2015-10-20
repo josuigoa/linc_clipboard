@@ -1,5 +1,5 @@
 # linc/clipboard
-a linc library to use the system Clipboard. Actually it works on windows and mac.
+a linc library to use the system Clipboard. Currently works on windows and mac.
 
 ###Install
 `haxelib git linc_clipboard https://github.com/josuigoa/linc_clipboard.git`
@@ -21,6 +21,9 @@ class Test {
 
 }
 ```
+
+###Functions
+* copy and paste plain text
 
 ###TODO
 * get linux working
