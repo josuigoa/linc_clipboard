@@ -1,5 +1,5 @@
 # linc/clipboard
-a linc library to use the system Clipboard. Actually it only works on windows.
+a linc library to use the system Clipboard. Actually it works on windows and mac.
 
 ###Install
 `haxelib git linc_clipboard https://github.com/josuigoa/linc_clipboard.git`
@@ -12,6 +12,7 @@ class Test {
         
     static function main() {
 
+    	trace('previously in the clipboard... "${Clipboard.paste()}"');
     	trace('Copying "Hello world" text to clipboard.');
     	Clipboard.copy("Hello world");
     	trace('this is what is in the clipboard: "${Clipboard.paste()}"');
@@ -22,5 +23,5 @@ class Test {
 ```
 
 ###TODO
-* get mac and linux working
+* get linux working
 * copy/paste more than simple text (e.g. images)
