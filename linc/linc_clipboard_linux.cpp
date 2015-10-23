@@ -23,6 +23,9 @@ namespace linc {
             GtkClipboard* clipboard = gtk_clipboard_get(GDK_SELECTION_CLIPBOARD);
             gtk_clipboard_set_text(clipboard, s.c_str(), strlen(s) + 1);
 
+             // store contents sto they're available after exit
+            gtk_clipboard_store(clipboard);
+
     	} //set
 
         ::String get() {
