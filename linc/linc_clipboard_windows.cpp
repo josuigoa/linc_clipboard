@@ -8,7 +8,7 @@ namespace linc {
 
     namespace clipboard {
 
-    	void copy(::String s) {
+    	void set(::String s) {
             
             if (OpenClipboard(0)) {
 	    		EmptyClipboard();
@@ -25,9 +25,9 @@ namespace linc {
 				GlobalFree(hClipboardData);
     		}
 
-    	} //copy
+    	} //set
 
-    	::String paste() {
+    	::String get() {
 
     		if (OpenClipboard(0)) {
     			HANDLE hClipboardData = GetClipboardData(CF_TEXT);
@@ -38,7 +38,8 @@ namespace linc {
     		}
 
             return ::String(std::string().c_str());
-    	} //paste
+            
+    	} //get
 
     } //clipboard namespace
 

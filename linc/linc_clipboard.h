@@ -7,8 +7,8 @@ namespace linc {
 
     namespace clipboard {
 
-    	extern void copy(::String s);
-    	extern ::String paste();
+    	extern void set(::String s);
+    	extern ::String get();
 
     } //clipboard namespace
 

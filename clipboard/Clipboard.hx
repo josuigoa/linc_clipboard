@@ -6,10 +6,10 @@ package clipboard;
 @:build(linc.Linc.xml('clipboard'))
 extern class Clipboard {
 
-    @:native('linc::clipboard::copy')
-    static function copy(s:String):Void;
+    @:native('linc::clipboard::set')
+    static function set(s:String):Void;
 
-    @:native('linc::clipboard::paste')
-    static function paste() : String;
+    @:native('linc::clipboard::get')
+    static function get() : String;
 
 } //Clipboard

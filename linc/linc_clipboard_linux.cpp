@@ -10,7 +10,7 @@ namespace linc {
 
         static bool gtk_inited = false;
 
-    	void copy(::String s) {
+    	void set(::String s) {
 
             if(!gtk_inited) {
                 gtk_init(NULL, NULL);
@@ -23,9 +23,9 @@ namespace linc {
             GtkClipboard* clipboard = gtk_clipboard_get(GDK_SELECTION_CLIPBOARD);
             gtk_clipboard_set_text(clipboard, s.c_str(), strlen(s) + 1);
 
-    	} //copy
+    	} //set
 
-        ::String paste() {
+        ::String get() {
 
             if(!gtk_inited) {
                 gtk_init(NULL, NULL);
@@ -41,7 +41,7 @@ namespace linc {
             
             return ::String(std::string().c_str());
 
-    	} //paste
+    	} //get
 
     } //clipboard namespace
 

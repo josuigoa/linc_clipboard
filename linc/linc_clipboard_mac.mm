@@ -10,23 +10,23 @@ namespace linc {
 
     namespace clipboard {
 
-    	void copy(::String s) {
+    	void set(::String s) {
             
 			NSPasteboard *pasteBoard = [NSPasteboard generalPasteboard];
 		    [pasteBoard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:nil];
 
 		    [pasteBoard setString:[NSString stringWithUTF8String:s.c_str()] forType:NSStringPboardType];
 
-    	} //copy
+    	} //set
 
-    	::String paste() {
+    	::String get() {
 
     		NSPasteboard *pasteBoard = [NSPasteboard generalPasteboard];
 			NSString *text = [pasteBoard stringForType:NSStringPboardType];
 				
 			return ::String([text UTF8String]);
 
-    	} //paste
+    	} //get
 
     } //clipboard namespace
 

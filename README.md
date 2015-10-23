@@ -12,10 +12,10 @@ class Test {
         
     static function main() {
 
-    	trace('previously in the clipboard... "${Clipboard.paste()}"');
+    	trace('previously in the clipboard... "${Clipboard.get()}"');
     	trace('Copying "Hello world" text to clipboard.');
-    	Clipboard.copy("Hello world");
-    	trace('this is what is in the clipboard: "${Clipboard.paste()}"');
+    	Clipboard.set("Hello world");
+    	trace('this is what is in the clipboard: "${Clipboard.get()}"');
 
     }
 
@@ -23,7 +23,7 @@ class Test {
 ```
 
 ###Functions
-* copy and paste plain text
+* set and get plain text
 
 ###TODO
-* copy/paste more than simple text (e.g. images)
+* set/get more than simple text (e.g. images)
