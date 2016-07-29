@@ -13,6 +13,9 @@
         <section if="mac">
           <file name="${LINC_CLIPBOARD_PATH}/linc/linc_clipboard_mac.mm" />
         </section>
+        <section if="ios">
+          <file name="${LINC_CLIPBOARD_PATH}/linc/linc_clipboard_ios.mm" />
+        </section>
 
     		<section if="windows">
     			<file name="${LINC_CLIPBOARD_PATH}/linc/linc_clipboard_windows.cpp" />
